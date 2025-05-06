@@ -7,7 +7,6 @@ function initAutonext() {
   window.addEventListener("message", onMessage);
 
   let playerDF = document.getElementById("playerDF");
-  console.log(playerDF);
   playerDF.contentWindow.postMessage("marco", "*");
 }
 
