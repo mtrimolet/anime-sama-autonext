@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Anime Sama Autonext",
+  "short_name": "AS Autonext",
+  "version": "1.0",
+  "description": "Trigger navigation and start next episode",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://anime-sama.fr/*"],
+      "js": ["content_scripts/autonext.js"]
+    },
+    {
+      "matches": [
+        "*://video.sibnet.ru/*",
+        "*://sendvid.com/*"
+      ],
+      "js": ["content_scripts/player_gateway.js"],
+      "all_frames": true
+    }
+  ]
+}
