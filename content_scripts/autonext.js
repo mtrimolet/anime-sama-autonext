@@ -1,5 +1,6 @@
 function onMessage(event) {
   alert(`autoplay received: ${JSON.stringify(event)}`);
+  if (event.data == "nextEp") nextEp();
 }
 
 function initAutonext() {
